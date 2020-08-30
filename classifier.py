@@ -23,7 +23,6 @@ while True:
 
     elif key == ord("p"):
         print("Store positive: ")
-
         subprocess.run('bash %s positive' % (scriptPath), shell=True)
     elif key == ord("n"):
         print("Store negative: ")
