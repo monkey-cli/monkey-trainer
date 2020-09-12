@@ -32,9 +32,25 @@ The `.txt` file must contain all the paths of the negative images.
 To generate this file run the method `generate_negative_description_file` from `'/cascade.py'`.
 
 ### Step 3 
-Install `opencv_annotation`, if not installed.
+Install `opencv_annotation`, `opencv_createsamples` & `opencv_traincascade`, if not installed.
 https://docs.opencv.org/master/d0/db2/tutorial_macos_install.html
 
+```bash
+# Steps
+
+
+git clone https://github.com/opencv/opencv.git
+
+# opencv_createsamples & opencv_traincascade are not part of the latest release
+git checkout 3.4
+
+mkdir build_opencv
+cd build_opencv
+
+cmake -DCMAKE_BUILD_TYPE=Release ../opencv
+
+make -j7 # runs 7 jobs in parallel
+```
 
 ### Step 4 
 Generate positive description file by using `opencv_annotation`.
@@ -47,3 +63,6 @@ Run command:
 
 /Users/${user}/Desktop/projects/monkey-cli/build_opencv/bin/opencv_annotation --annotations=positive.txt --images=positive/
 ```
+
+### Step 5
+Create vector file from positives description file.
