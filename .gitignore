@@ -1,3 +1,10 @@
 # Training screenshot folders
 positive
 negative
+output
+
+# output files
+
+positive.txt
+negative.txt
+positive.vec

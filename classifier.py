@@ -1,7 +1,7 @@
 import cv2
 import subprocess
 
-imageURI = "test.png"
+imageURI = "dummy.png"
 image = cv2.imread(imageURI)
 
 cv2.imshow("Focus window", image)

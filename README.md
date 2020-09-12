@@ -38,7 +38,6 @@ https://docs.opencv.org/master/d0/db2/tutorial_macos_install.html
 ```bash
 # Steps
 
-
 git clone https://github.com/opencv/opencv.git
 
 # opencv_createsamples & opencv_traincascade are not part of the latest release
@@ -66,3 +65,26 @@ Run command:
 
 ### Step 5
 Create vector file from positives description file.
+Run command:
+
+```bash
+/path/to/opencv_createsamples -info positive.txt -w 24 -h 24 -num 1000 -vec positive.vec
+
+# Example
+/Users/${user}/Desktop/projects/monkey-cli/build_opencv/bin/opencv_createsamples -info positive.txt -w 24 -h 24 -num 1000 -vec positive.vec
+```
+
+### Step 6
+Train cascade.
+https://docs.opencv.org/master/dc/d88/tutorial_traincascade.html
+
+```bash
+/path/to/opencv_traincascade -data output/  -vec positive.vec -bg negative.txt -w 24 -h 24 -numPos 20 -numNeg 100 -numStages 10
+
+
+# Example:
+/Users/${user}/Desktop/projects/monkey-cli/build_opencv/bin/opencv_traincascade -data output/  -vec positive.vec -bg negative.txt -w 24 -h 24 -numPos 20 -numNeg 100 -numStages 10
+
+# - numPos: must be less than the number of the drawn rectangles created in Step 5. 
+ 
+```
