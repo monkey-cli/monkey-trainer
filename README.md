@@ -24,7 +24,7 @@ Run the `classifier.py` scripts for a selected mobile platform `iOS` or `Android
 
 - Press **"p"** for positive screenshot capture
 - Press **"n"** for negative screenshot capture
-- Press **"q"** to cancel the capture
+- Press **"q"** to quit/cancel the capture
 
 ### Step 2 
 Generate negative description file.
@@ -79,11 +79,11 @@ Train cascade.
 https://docs.opencv.org/master/dc/d88/tutorial_traincascade.html
 
 ```bash
-/path/to/opencv_traincascade -data output/  -vec positive.vec -bg negative.txt -w 24 -h 24 -numPos 20 -numNeg 100 -numStages 10
+/path/to/opencv_traincascade -data output/  -vec positive.vec -bg negative.txt -w 24 -h 24 -numPos 15 -numNeg 100 -numStages 10
 
 
 # Example:
-/Users/${user}/Desktop/projects/monkey-cli/build_opencv/bin/opencv_traincascade -data output/  -vec positive.vec -bg negative.txt -w 24 -h 24 -numPos 20 -numNeg 100 -numStages 10
+/Users/${user}/Desktop/projects/monkey-cli/build_opencv/bin/opencv_traincascade -data output/  -vec positive.vec -bg negative.txt -w 24 -h 24 -numPos 15 -numNeg 100 -numStages 10
 
 # - numPos: must be less than the number of the drawn rectangles created in Step 5. 
  
