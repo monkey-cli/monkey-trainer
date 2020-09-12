@@ -26,3 +26,8 @@ Run the `classifier.py` scripts for a selected mobile platform `iOS` or `Android
 - Press **"n"** for negative screenshot capture
 - Press **"q"** to cancel the capture
 
+### Step 2 
+Generate negative description file.
+The `.txt` file must contain all the paths of the negative images.
+To generate this file run the method `generate_negative_description_file` from `'/cascade.py'`.
+
