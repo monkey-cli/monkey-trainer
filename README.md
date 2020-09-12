@@ -31,3 +31,19 @@ Generate negative description file.
 The `.txt` file must contain all the paths of the negative images.
 To generate this file run the method `generate_negative_description_file` from `'/cascade.py'`.
 
+### Step 3 
+Install `opencv_annotation`, if not installed.
+https://docs.opencv.org/master/d0/db2/tutorial_macos_install.html
+
+
+### Step 4 
+Generate positive description file by using `opencv_annotation`.
+Run command:
+
+```bash
+/path/to/opencv_annotation --annotations=positive.txt --images=positiveDir/
+
+# Example:
+
+/Users/${user}/Desktop/projects/monkey-cli/build_opencv/bin/opencv_annotation --annotations=positive.txt --images=positive/
+```
