@@ -2,19 +2,6 @@
 Cascade Classifier trainer to generate xml classifiers for #monkey-vision
 
 
-```bash
-# Build Dockerfile
-docker build .
-
-# Run image detached
-docker run -td <image>
-
-# ssh in the running container
-docker exec -it <containerID> bash
-
-```
-
-
 ## Training Cascade Classifier
 
 ### Step 1
@@ -35,7 +22,7 @@ Generate negative description file.
 The `.txt` file must contain all the paths of the negative images.
 To generate this file run the method `generate_negative_description_file` from `'/cascade.py'`.
 
-### Step 4
+### Step 4 [Optional]
 Install `opencv_annotation`, `opencv_createsamples` & `opencv_traincascade`, if not installed.
 https://docs.opencv.org/master/d0/db2/tutorial_macos_install.html
 
