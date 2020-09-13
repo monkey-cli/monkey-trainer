@@ -26,12 +26,16 @@ Run the `classifier.py` scripts for a selected mobile platform `iOS` or `Android
 - Press **"n"** for negative screenshot capture
 - Press **"q"** to quit/cancel the capture
 
-### Step 2 
+### Step 2
+Resize collected screenshots. Run the file `monkey_compact.py`. It will resize all the captured images into width 100px and scaled height. After running this script two new folders will be created `/pos` and  `/neg` containing the resized images. **In the following steps is suggested to use the resized images for faster training.**
+
+
+### Step 3
 Generate negative description file.
 The `.txt` file must contain all the paths of the negative images.
 To generate this file run the method `generate_negative_description_file` from `'/cascade.py'`.
 
-### Step 3 
+### Step 4
 Install `opencv_annotation`, `opencv_createsamples` & `opencv_traincascade`, if not installed.
 https://docs.opencv.org/master/d0/db2/tutorial_macos_install.html
 
@@ -51,7 +55,7 @@ cmake -DCMAKE_BUILD_TYPE=Release ../opencv
 make -j7 # runs 7 jobs in parallel
 ```
 
-### Step 4 
+### Step 5
 Generate positive description file by using `opencv_annotation`.
 Run command:
 
@@ -63,7 +67,7 @@ Run command:
 /Users/${user}/Desktop/projects/monkey-cli/build_opencv/bin/opencv_annotation --annotations=positive.txt --images=positive/
 ```
 
-### Step 5
+### Step 6
 Create vector file from positives description file.
 Run command:
 
@@ -74,7 +78,7 @@ Run command:
 /Users/${user}/Desktop/projects/monkey-cli/build_opencv/bin/opencv_createsamples -info positive.txt -w 24 -h 24 -num 1000 -vec positive.vec
 ```
 
-### Step 6
+### Step 7
 Train cascade.
 https://docs.opencv.org/master/dc/d88/tutorial_traincascade.html
 
