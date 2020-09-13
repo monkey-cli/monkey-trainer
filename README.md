@@ -31,9 +31,11 @@ https://docs.opencv.org/master/d0/db2/tutorial_macos_install.html
 
 git clone https://github.com/opencv/opencv.git
 
-# opencv_createsamples & opencv_traincascade are not part of the latest release
+# opencv_createsamples & opencv_traincascade are not part of the latest release/version
+# cd into the opencv folder and checkout version 3.4 branch
 git checkout 3.4
 
+# cd back to parent dir and create the build directory
 mkdir build_opencv
 cd build_opencv
 
