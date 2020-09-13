@@ -72,10 +72,10 @@ Create vector file from positives description file.
 Run command:
 
 ```bash
-/path/to/opencv_createsamples -info positive.txt -w 24 -h 24 -num 1000 -vec positive.vec
+/path/to/opencv_createsamples -info positive.txt -w 100 -h 24 -num 1000 -vec positive.vec
 
 # Example
-/Users/${user}/Desktop/projects/monkey-cli/build_opencv/bin/opencv_createsamples -info positive.txt -w 24 -h 24 -num 1000 -vec positive.vec
+/Users/${user}/Desktop/projects/monkey-cli/build_opencv/bin/opencv_createsamples -info positive.txt -w 100 -h 24 -num 1000 -vec positive.vec
 ```
 
 ### Step 7
@@ -83,11 +83,11 @@ Train cascade.
 https://docs.opencv.org/master/dc/d88/tutorial_traincascade.html
 
 ```bash
-/path/to/opencv_traincascade -data output/  -vec positive.vec -bg negative.txt -w 24 -h 24 -numPos 15 -numNeg 100 -numStages 10
+/path/to/opencv_traincascade -data output/  -vec positive.vec -bg negative.txt -w 100 -h 24 -numPos 15 -numNeg 100 -numStages 10
 
 
 # Example:
-/Users/${user}/Desktop/projects/monkey-cli/build_opencv/bin/opencv_traincascade -data output/  -vec positive.vec -bg negative.txt -w 24 -h 24 -numPos 15 -numNeg 100 -numStages 10
+/Users/${user}/Desktop/projects/monkey-cli/build_opencv/bin/opencv_traincascade -data output/  -vec positive.vec -bg negative.txt -w 100 -h 24 -numPos 15 -numNeg 100 -numStages 10
 
 # - numPos: must be less than the number of the drawn rectangles created in Step 5. 
  
