@@ -13,7 +13,7 @@ Run the `classifier.py` scripts for a selected mobile platform `iOS` or `Android
 - Press **"n"** for negative screenshot capture
 - Press **"q"** to quit/cancel the capture
 
-### Step 2
+### Step 2 [Optional]
 Resize collected screenshots. Run the file `monkey_compact.py`. It will resize all the captured images into width 100px and scaled height. After running this script two new folders will be created `/pos` and  `/neg` containing the resized images. **In the following steps is suggested to use the resized images for faster training.**
 
 
